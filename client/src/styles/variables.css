@@ -1,0 +1,82 @@
+/* =============================================================================
+   FITME: CSS IN DEPTH DESIGN SYSTEM & CUSTOM PROPERTIES
+   Principles applied:
+    - Root custom properties for semantic color palette, typography & spacing
+    - Fluid typography & spacing using clamp()
+    - Elevation & glow shadow tokens
+    - High-contrast athletic dark mode theme
+   ============================================================================= */
+
+:root {
+  /* Brand Accent Colors (Athletic High Energy) */
+  --color-primary: #00e599;         /* Electric Hyper Lime */
+  --color-primary-hover: #00ffaa;
+  --color-primary-dim: rgba(0, 229, 153, 0.15);
+  --color-primary-glow: rgba(0, 229, 153, 0.35);
+
+  --color-secondary: #00d2ff;       /* Cyber Velocity Cyan */
+  --color-secondary-hover: #33dcff;
+  --color-secondary-dim: rgba(0, 210, 255, 0.15);
+
+  --color-accent-fire: #ff4d6d;     /* High Intensity Coral Red */
+  --color-accent-amber: #ffaa00;    /* PR Gold / Caution Amber */
+  --color-accent-purple: #9d4edd;   /* Recovery Lavender */
+
+  /* Dark Theme Surfaces */
+  --bg-deep: #080b11;               /* Deepest Canvas */
+  --bg-surface: #0e131f;            /* Primary Card Surface */
+  --bg-surface-elevated: #161d2f;   /* Elevated Modals / Dropdowns */
+  --bg-surface-glass: rgba(14, 19, 31, 0.85);
+  --bg-input: #111728;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --border-focus: var(--color-primary);
+
+  /* Typography Colors */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-inverse: #080b11;
+
+  /* Typography Scales (CSS in Depth: Fluid clamp scales) */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+
+  --font-size-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --font-size-sm: clamp(0.8rem, 0.75rem + 0.3vw, 0.9rem);
+  --font-size-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+  --font-size-md: clamp(1.1rem, 1.05rem + 0.4vw, 1.25rem);
+  --font-size-lg: clamp(1.35rem, 1.2rem + 0.8vw, 1.65rem);
+  --font-size-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);
+  --font-size-hero: clamp(2.2rem, 1.8rem + 2vw, 3.2rem);
+
+  /* Spacing Scale */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+  --glow-primary: 0 0 24px var(--color-primary-glow);
+  --glow-accent: 0 0 24px rgba(0, 210, 255, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
